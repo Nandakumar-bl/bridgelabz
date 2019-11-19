@@ -9,11 +9,11 @@ public class Guess_game {
 		utility.getInt();
 		try
 		{
-			System.out.println("guessed no is"+utility.find());
+			System.out.println("guessed no is"+utility.find());  //guessing a number
 		}
 		catch(Exception e)
 		{
-			System.out.println("enter correct input");
+			System.out.println("enter correct input");      
 		}
 
 	}

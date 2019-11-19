@@ -12,11 +12,11 @@ public class Palindrome {
 		{
 		case 1:
 		      System.out.println("Enter any number to check palindrome");
-		      int check_int=utility.getInt();
+		      int check_int=utility.getInt();                       //getting integer input
 		      System.out.println(utility.check_palindrome(check_int));
 		case 2:
 		      System.out.println("Enter any word to check palindrome");
-		      String check_str=utility.getLine();
+		      String check_str=utility.getLine();       //getting string input
 		      System.out.println(utility.check_palindrome(check_str));	
 		}
 

@@ -1,5 +1,6 @@
 package com.bridgelabz.functional;
 
+////////////////////////program to calculate the eucledian distance///////
 import com.bridgelabz.utility.utility;
 
 public class Distance {

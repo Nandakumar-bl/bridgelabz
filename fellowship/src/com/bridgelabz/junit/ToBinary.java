@@ -10,7 +10,7 @@ public class ToBinary {       //decimal to binary program
 		
 		System.out.println("enter a number to convert to binary");
 		decimal=utility.getInt();    //getting a number to convert to binary;
-		utility.convert_to_binary(decimal);
+		System.out.println(utility.convert_to_binary(decimal));
 		
 	}
 

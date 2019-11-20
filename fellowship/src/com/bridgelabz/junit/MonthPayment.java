@@ -1,6 +1,6 @@
 package com.bridgelabz.junit;
 
-import com.bridgelabz.utility.utility;
+import com.bridgelabz.utility.utility;    //program to get monthly payment
 
 public class MonthPayment {
 

@@ -1,5 +1,5 @@
 package com.bridgelabz.junit;
-
+                               //program to find the day of the week
 import com.bridgelabz.utility.utility;
 
 public class FindDay 
@@ -15,6 +15,6 @@ public static void main(String args[])
 	int year=utility.getInt();
 	String days[]= {"sunday","monday","tuesday","wednesday","thursdday","friday","saturday"};
 	String curr_day=days[utility.dayofweek(date,month,year)];
-    System.out.println("the day is :"+curr_day);
+    System.out.println("the day is :"+curr_day);     //printing the day according to date
 }
 }

@@ -1,6 +1,6 @@
 package com.bridgelabz.junit;
 
-import com.bridgelabz.utility.utility;
+import com.bridgelabz.utility.utility;  //program to get minimum notes for the required amount
 
 public class Vending_Machine {
       

@@ -51,7 +51,7 @@ public class utility {
 	  }
 	  return 0.0;
 }
-  public static void Str_replace(String s)
+  public static void Str_replace(String s) //string replace
     {
     	String Default="Hi username,how are you";
     	String original=Default.replaceAll("username",s);
@@ -108,6 +108,8 @@ public class utility {
     	}
     }
     
+  
+  //program for harmonic number
   public static void Harmonic_num(int n)
     {
     	float ans=0;
@@ -119,6 +121,7 @@ public class utility {
 	    	
     }
   
+  //Prime factorization
   public static void prime_fact(int n)
   {
 	  int factor;
@@ -186,6 +189,8 @@ public class utility {
       	pw.println();
       }
 	}
+	
+	//prints the index which gives sum zero
 	public static int printindex_sum0(int[] arr,int limit)
 	{
 		int count=0;
@@ -213,11 +218,13 @@ public class utility {
 		
 		return count;
 	}
-	
+	    //finds eucledian distance
 	public static double find_Edistance(int x, int y)
 	{
 		return Math.sqrt(x*x+y*y);  //formula for eucledian diastance
 	}
+	
+	//finds roots of a quadratic equation
 
 	public static void find_roots(int a,int b,int c)
 	{
@@ -301,6 +308,8 @@ public class utility {
 
 
 	}
+	
+	// to generate counpon code
 	public static void cou_generation(int no_of_coupons)
 	{
 		String s="abcdefghijklmnopqrstuvwyz1234567890";
@@ -317,6 +326,8 @@ public class utility {
 			System.out.println(coupon);
 		}
 	}
+	
+	//to get monthly payment
 	public static double monthypayment(double prin,double i_rate,double year)
 	{
 		double m_payment;
@@ -325,6 +336,8 @@ public class utility {
 		return m_payment;
 		
 	}
+	
+	//to find day of the week
 	public static int dayofweek(int date,int month,int year)
 	{
 		int y0,m0,x,d0;                 //finding the day of particular date using georgian calender
@@ -336,6 +349,7 @@ public class utility {
 	    return d0;
 	}
   
+	//vending machine program
 	public static void print_notes(int amt,int i)
 	{
 		int currency[]= {1000,500,100,50,20,10,5,2,1};
@@ -379,6 +393,7 @@ public class utility {
 		return elapsedtime;
 	}
 	
+	//temp conversion from 'C to'F and vice-versa
 	public static void temperature_conversion(int temp,int choice)
 	{
 		switch(choice)
@@ -398,7 +413,7 @@ public class utility {
 		
 	}
 
-	public static void sqrt(double c)
+	public static double sqrt(double c)
 	{
 		double t,epsilon;                 //finding sqrt through newton method
 		t=c;                                           
@@ -407,9 +422,11 @@ public class utility {
 		{
 			t=(c/t+t)/2;	
 		}
-      System.out.println("the sqrt of"+c+" is "+t);
+  
+      return t;
+      
 	}
-	public static void convert_to_binary(int dec)
+	public static String convert_to_binary(int dec)
 	{
 		String binary="";
 		while(dec!=0)
@@ -418,7 +435,7 @@ public class utility {
 			binary=temp+binary;
 			dec=dec/2;
 		}
-		System.out.println(binary);
+	return binary;
 	}
 	
 	public static void convertto_bin_swap(int dec)
@@ -465,6 +482,7 @@ public class utility {
 		System.out.println("decimal value of swapped nibble is"+dec);
 	}
 	
+	//bubble sort integer
 	public static int[] bubblesort(int[] arr)
 	{
 		for(int i=0;i<arr.length;i++)
@@ -483,6 +501,7 @@ public class utility {
 		return arr;
 	}
 	
+	//bubble sort using generics
 	public static <T extends Comparable<T>> T[] bubblesort_G(T[] arr)
 	{
 		for(int i=0;i<arr.length;i++)
@@ -502,6 +521,7 @@ public class utility {
 	}
 
 	
+	//insertion sort using generics
 	public static String[] insertion_sort(String arr[])
 	{
 		for(int i=1;i<arr.length;i++)
@@ -519,6 +539,7 @@ public class utility {
 		return arr;
 	}
 	
+	//insertio sort for generics
 	public static <T extends Comparable<T>> T[] insertion_sort_G(T arr[])
 	{
 		for(int i=1;i<arr.length;i++)
@@ -546,6 +567,7 @@ public class utility {
 	}
 	
   
+	//checking anagram for given two words
 	public static boolean check_anagram(String word1,String word2)
 	{
 		word1.toLowerCase();
@@ -570,6 +592,7 @@ public class utility {
 		return true;
 	}
 	
+	           //checking anagram for integer
 	public static boolean check_anagram_int(String word1,String word2)
 	{
 		int arr1[]=new int[10];
@@ -592,6 +615,8 @@ public class utility {
 		return true;
 	}
 	
+	
+	//printing prime number in given range
 	public static String print_primes(int min,int max) 
 	{
 		String str="";
@@ -615,7 +640,7 @@ public class utility {
 	}
 	
 	
-    
+    //checking palindrome using recursion
 	public static <t> boolean check_palindrome(t data)
     {
     	String temp=data.toString();
@@ -648,7 +673,7 @@ public class utility {
 		return str;
 		
 	}
-	
+	  //binary search for strings
 	public static  void binarysearch(String[] Sorted_arr,String find)
 	{
 		int mid=0;
@@ -676,7 +701,7 @@ public class utility {
 	}
 
 
-
+     //binary search generics
 public static <t extends Comparable<t>>  void binarysearch_generics(t[] Sorted_arr,t find)
 {
 	int mid=0;
@@ -703,6 +728,8 @@ public static <t extends Comparable<t>>  void binarysearch_generics(t[] Sorted_a
 	
 }
 
+
+          //merge sort for string
 public static void merge(String arr[], int l, int m, int r) 
 { 
     // Find sizes of two subarrays to be merged 
@@ -780,6 +807,8 @@ public static String getFormatedDate(Date date){
 }
 
 
+            //String replace using REGEX
+
 public static String convertString(UserDetails userDetails,String message){
 	String REGEX_NAME="<<name>>";
 	String REGEX_FULLNAME="<<fullname>>";
@@ -804,6 +833,7 @@ public static String convertString(UserDetails userDetails,String message){
 	return message;
 }
 
+//guess game code
 public static int find()
 {
 	int low=0,high=127,mid;

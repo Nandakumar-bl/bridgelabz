@@ -1,6 +1,6 @@
 package com.bridgelabz.logical;
 
-import com.bridgelabz.utility.utility;
+import com.bridgelabz.utility.utility;    //program to generate coupon
 
 public class Coupon_Number 
 {

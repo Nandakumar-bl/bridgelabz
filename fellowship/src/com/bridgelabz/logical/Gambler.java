@@ -1,6 +1,6 @@
 package com.bridgelabz.logical;
 
-import com.bridgelabz.utility.utility;
+import com.bridgelabz.utility.utility;  //gambler program
 
 public class Gambler {
 
@@ -9,15 +9,15 @@ public class Gambler {
 
 		System.out.println("Enter Stake value: ");
 
-		int Stake=utility.getInt();
+		int Stake=utility.getInt();              //getting stake value
 
 		System.out.println("Enter Goal value: ");
 
-		int Goal=utility.getInt();
+		int Goal=utility.getInt();              //setting the goal
 
 		System.out.println("Enter number of times: ");
 
-		int noOfTimes=utility.getInt();
+		int noOfTimes=utility.getInt();          //getting the number of times
 
 		utility.gambling(Stake, Goal, noOfTimes);	
 		

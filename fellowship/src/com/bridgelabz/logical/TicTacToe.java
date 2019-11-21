@@ -1,13 +1,19 @@
+/* Author   -  Nanda kumar.s
+ * Version  -  1.2
+ * Purpose  -  program to play tictactoe
+ * FileName -  TicTacToe.java
+ * Date     -  19/11/2019
+ */
 package com.bridgelabz.logical;
 
 import java.util.Random;
-import java.util.Scanner;
 
-import com.bridgelabz.utility.utility;
+
+
+import com.bridgelabz.utility.Utility;
 
 public class TicTacToe 
 {
-	static Scanner sc=new Scanner(System.in);
 	static Random rand=new Random();
 	public static void ticTacToe() 
 	{
@@ -101,8 +107,8 @@ public class TicTacToe
 
 		if (countUserIn > 0) {
 			System.out.println("Enter the cell");
-			r = sc.nextInt();                  //getting user choice
-			c = sc.nextInt();
+			r = Utility.GetInt();                 //getting user choice
+			c = Utility.GetInt();
 		}
 
 		while (u == 0 && countUserIn > 0) {
@@ -111,8 +117,8 @@ public class TicTacToe
 				u = 1;
 			} else {
 				System.out.println("Enter the cells numbers from\nabove indexes");
-				r = sc.nextInt();
-				c = sc.nextInt();
+				r = Utility.GetInt();
+				c = Utility.GetInt();
 			}
 		}
 
@@ -179,7 +185,7 @@ public class TicTacToe
 	{
 		int i=0;
 		System.out.println("enter 1 to play tictactoe");
-		i=utility.getInt();
+		i=Utility.GetInt(); 
 		if(i==1)
 		ticTacToe();
 		else

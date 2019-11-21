@@ -1,5 +1,10 @@
-package com.bridgelabz.algotrithm;
-
+/* Author   -  Nanda kumar.s
+ * Version  -  1.2
+ * Purpose  -  program to get and set the userdetails for the regex Function program
+ * FileName -  UserDetails.java
+ * Date     -  19/11/2019
+ */
+package com.bridgelabz.algorithm;
 public class UserDetails{
 	private String fName;
 	private String lName;

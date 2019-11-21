@@ -1,8 +1,12 @@
+/* Author   -  Nanda kumar.s
+ * Version  -  1.2
+ * Purpose  -  program to Find the Roots of the Quadratic Equation.
+ * FileName -  Quadratic.java
+ * Date     -  19/11/2019
+ */
 package com.bridgelabz.functional;
 
-import com.bridgelabz.utility.utility;
-
-//program to find roots of quadratic equation
+import com.bridgelabz.utility.Utility;
 
 public class Quadratic {
 
@@ -10,13 +14,13 @@ public class Quadratic {
 	{
 		int a,b,c;
 		System.out.println("enter a");
-	     a=utility.getInt();
+	     a=Utility.GetInt();
 	     System.out.println("enter b");
-	     b=utility.getInt();
+	     b=Utility.GetInt();
 	     System.out.println("enter c");
-		c=utility.getInt();
+		c=Utility.GetInt();
 
-		utility.find_roots(a,b,c);
+		Utility.FindRoots(a,b,c);
 		
 		
 

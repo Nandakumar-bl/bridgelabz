@@ -10,16 +10,14 @@ import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.*;
 
+import com.bridgelabz.algorithm.UserDetails;
 
-import com.bridgelabz.algotrithm.UserDetails;
-
-public class utility {
+public class Utility {
 	  static PrintWriter pw=new PrintWriter(System.out,true);
       static BufferedReader br=new BufferedReader(new InputStreamReader(System.in)); 
       static Scanner sc=new Scanner(System.in);
-	  // string replace
       
-  public static int getInt()
+  public static int GetInt()
   {
 	  try
 	  {
@@ -30,7 +28,7 @@ public class utility {
 	  }
 	  return 0;
 }
-  public static String getLine()
+  public static String GetLine()
   {
 	  try {
 	      
@@ -41,7 +39,8 @@ public class utility {
 	  }
 	  return "";
 }
-  public static double getDouble()
+  
+  public static double GetDouble()
   {
 	  try {
 	        return Double.parseDouble(br.readLine());
@@ -51,16 +50,23 @@ public class utility {
 	  }
 	  return 0.0;
 }
-  public static void Str_replace(String s) //string replace
+  /* static function to replace the string message with username
+   * @param -String s
+   * @Return-String original
+   */
+  public static String StrReplace(String s) //string replace
     {
     	String Default="Hi username,how are you";
     	String original=Default.replaceAll("username",s);
-    	System.out.println(original);
+    	return (original);
 	    	
 	    	
     }
-	   //  flipcoin program
-  public static void Flipcoin(int flips)
+  /* static function to print percentage of heads and tails for the number of flips
+   * @param -int flips
+   * @Return-void
+   */
+  public static void FlipCoin(int flips)
     {
     	int heads_c=0,tails_c=0;
     	int  t_percent,h_percent;
@@ -76,8 +82,11 @@ public class utility {
         System.out.println("Tails percent is:"+t_percent);
         System.out.println("Head percent is:"+h_percent);
     }
-    //program to check leap year
-  public static void check_leap(int year)
+  /* static function to check leap year
+   * @param -int year
+   * @Return-boolean
+   */
+  public static boolean CheckLeap(int year)
     {
 	  while(year!=0)
 	  {
@@ -85,22 +94,25 @@ public class utility {
 		  {
 			  
     	    if((year%100!=0) && (year%400==0) || (year%4==0))
-    		  System.out.println(year+" is a leap year");
+    		return true;
 	    	else
-    		  System.out.println(year+" is not a leap year");
-            break;
+    		 return false;
 		  }
 		  else
 		  {
 			  System.out.println("enter a valid year");
-			  year=getInt();
+			  year=GetInt();
 		  }
 		  
 	  }
+	  return false;
     }
 	    
-  //prints power 0f two
-  public static void Powerof_2(int n)
+  /* static function to print power of 2
+   * @param -int n
+   * @Return-void
+   */
+  public static void PowerOf2(int n)
     {
     	for(int i=0;i<=n;i++)
     	{
@@ -109,8 +121,11 @@ public class utility {
     }
     
   
-  //program for harmonic number
-  public static void Harmonic_num(int n)
+  /* static function to print the harmonic value
+   * @param -int n
+   * @Return-void
+   */
+  public static void HarmonicNum(int n)
     {
     	float ans=0;
     	for(float i=1;i<=n;i++)
@@ -121,8 +136,11 @@ public class utility {
 	    	
     }
   
-  //Prime factorization
-  public static void prime_fact(int n)
+  /* static function to print the prime factors
+   * @param -int n
+   * @Return-void 
+   *    */
+  public static void PrimeFact(int n)
   {
 	  int factor;
 	  for(factor=2;factor<=n*n;factor++)
@@ -138,7 +156,11 @@ public class utility {
 		  System.out.println("factor is"+factor);
 	  
   }
-  public static void inputint(int row,int col)
+  /* static function to get two dimensional array input for integer and to print array
+   * @param -int row,int col
+   * @Return-void
+   */
+  public static void InputInt(int row,int col)
 	{
       Integer arr[][]=new Integer[row][col];
       for(int i=0;i<row;i++)
@@ -146,13 +168,17 @@ public class utility {
       	for(int j=0;j<col;j++)
       	{
       		 System.out.println("enter int value of row:"+i+"col:"+j);
-                arr[i][j]=getInt();
+                arr[i][j]=GetInt();
       	}
       }
-	    printarray(arr,row,col);
+	    Printarray(arr,row,col);
 	}
-	
-	public static void inputdouble(int row,int col)
+
+  /* static function to get two dimensional array input for double and to print array
+   * @param -int row,int col
+   * @Return-void
+   */
+	public static void InputDouble(int row,int col)
 	{
       Double arr[][]=new Double[row][col];
       for(int i=0;i<row;i++)
@@ -163,9 +189,13 @@ public class utility {
                 arr[i][j]=sc.nextDouble();
       	}
       }
-	    printarray(arr,row,col);
+	    Printarray(arr,row,col);
 	}
-	public static void inputboolean(int row,int col)
+	/* static function to get two dimensional array input for boolean and to print array
+	   * @param -int row,int col
+	   * @Return-void
+	   */
+	public static void InputBoolean(int row,int col)
 	{
       Boolean arr[][]=new Boolean[row][col];
       for(int i=0;i<row;i++)
@@ -176,9 +206,13 @@ public class utility {
                 arr[i][j]=sc.nextBoolean();
       	}
       }
-	    printarray(arr,row,col);
+	    Printarray(arr,row,col);
 	}
-	public static <t> void printarray(t arr[][],int row,int col)
+	/* static generic  function to print two dimensional array
+	   * @param -t arr[][],int row,int col
+	   * @Return-void
+	   */
+	public static <t> void Printarray(t arr[][],int row,int col)
 	{
 		for(int i=0;i<row;i++)
       {
@@ -189,9 +223,12 @@ public class utility {
       	pw.println();
       }
 	}
-	
-	//prints the index which gives sum zero
-	public static int printindex_sum0(int[] arr,int limit)
+
+	/* static function to print  three indexes of an array which gives sum zero
+	   * @param -int[] arr,int limit
+	   * @Return-int count
+	   */
+	public static int PrintIndexSum0(int[] arr,int limit)
 	{
 		int count=0;
 		for(int i=0;i<limit;i++)
@@ -218,15 +255,23 @@ public class utility {
 		
 		return count;
 	}
-	    //finds eucledian distance
-	public static double find_Edistance(int x, int y)
+
+	/* static function to find eucledian distance
+	   * @param -int x,int y
+	   * @Return-return Math.sqrt(x*x+y*y);
+	   */
+	
+	public static double FindEdistance(int x, int y)
 	{
 		return Math.sqrt(x*x+y*y);  //formula for eucledian diastance
 	}
 	
-	//finds roots of a quadratic equation
-
-	public static void find_roots(int a,int b,int c)
+	/* static function to print roots of a quadratic equation
+	   * @param -int a,int b,int c
+	   * @Return-void
+	   */
+	
+	public static void FindRoots(int a,int b,int c)
 	{
 		// calculating delta value
 
@@ -241,7 +286,12 @@ public class utility {
 				System.out.println(x2);
 	}
 	
-	public static void find_windchill(int t,int v)
+	/* static function to print wind chill
+	   * @param -int t,int v
+	   * @Return-void
+	   */
+	
+	public static void FindWindchill(int t,int v)
 	{
 		double wind_temp;
 		                          //formula to find windchill     
@@ -250,7 +300,12 @@ public class utility {
 		System.out.println("windchill is:"+wind_temp);   //prints wind chill
 	}
 
-	public static void gambling(int Stake,int Goal,int noOfTimes)
+	/* static function play gambling
+	   * @param -int Stake,int Goal,int noOfTimes
+	   * @Return-void
+	   */
+	
+	public static void Gambling(int Stake,int Goal,int noOfTimes)
 	{
 
 
@@ -309,8 +364,11 @@ public class utility {
 
 	}
 	
-	// to generate counpon code
-	public static void cou_generation(int no_of_coupons)
+	/* static function to generate coupon
+	   * @param -no_of_coupons
+	   * @Return-void
+	   */
+	public static void CouponGeneration(int no_of_coupons)
 	{
 		String s="abcdefghijklmnopqrstuvwyz1234567890";
 		for(int i=0;i<no_of_coupons;i++)
@@ -327,8 +385,11 @@ public class utility {
 		}
 	}
 	
-	//to get monthly payment
-	public static double monthypayment(double prin,double i_rate,double year)
+	/* static function to find  monthly payment
+	   * @param -double prin,double i_rate,double year
+	   * @Return-double m_payment;
+	   */
+	public static double MonthlyPayment(double prin,double i_rate,double year)
 	{
 		double m_payment;
 		double rate=i_rate/(12*100);
@@ -337,8 +398,11 @@ public class utility {
 		
 	}
 	
-	//to find day of the week
-	public static int dayofweek(int date,int month,int year)
+	/* static function to find day of the week
+	   * @param -int date,int month,int year
+	   * @Return-int d0
+	   */
+	public static int DayOfWeek(int date,int month,int year)
 	{
 		int y0,m0,x,d0;                 //finding the day of particular date using georgian calender
 		y0=year-(14-month)/12;
@@ -349,29 +413,36 @@ public class utility {
 	    return d0;
 	}
   
-	//vending machine program
-	public static void print_notes(int amt,int i)
+	/* static function to print minimum notes for given amount
+	   * @param -int amt
+	   * @Return-int[] notes
+	   */
+	public static int[] PrintNotes(int amt)
 	{
 		int currency[]= {1000,500,100,50,20,10,5,2,1};
 		int notes[]=new int[9];
+		for(int i=0;amt!=0;i++)
+		{
 		if(amt%currency[i]==0)
 		{
 			notes[i]=amt/currency[i];     
-			System.out.println("number of "+currency[i]+"'s are :"+notes[i]);
 			amt=0;
 		}
 		else
 		{
 			notes[i]=amt/currency[i];       //assinging number of notes
 			amt=amt-currency[i]*notes[i];   //calculating the remaining money
-			System.out.println("number of "+currency[i]+"'s are :"+notes[i]);
-			i++;
-			print_notes(amt,i);
 			
 		}
+		}
+		return notes;
 		
 	}
-	public static long start_ticking()
+	/* static functions to start stopwatcht
+	   * @param ------
+	   * @Return-long
+	   */
+	public static long StartTicking()
 	{
 		System.out.println("press 1 to start time");
 		sc.nextInt();
@@ -379,7 +450,11 @@ public class utility {
 		System.out.println(start);
 		return start;
 	}
-	public static long stop_ticking()
+	/* static function to stop the stopwatch
+	   * @param ---
+	   * @Return-long stop
+	   */
+	public static long StopTicking()
 	{
 		System.out.println("press 2 to stop time");
 		sc.nextInt();
@@ -387,14 +462,21 @@ public class utility {
 		System.out.println(stop);	
 		return stop;
 	}
-	public static long elapsed_time()
+	/* static function to finf elapse time for stopwatch
+	   * @param -null
+	   * @Return-long elapsedtime
+	   */
+	public static long ElapsedTime()
 	{
-		long elapsedtime=(start_ticking()-stop_ticking())/1000;
+		long elapsedtime=(StartTicking()-StopTicking())/1000;
 		return elapsedtime;
 	}
 	
-	//temp conversion from 'C to'F and vice-versa
-	public static void temperature_conversion(int temp,int choice)
+	/* static function to print and conversion from 'C to'F and vice-versa
+	   * @param -int temp,int choice
+	   * @Return-int temp
+	   */
+	public static int TemperatureConversion(int temp,int choice)
 	{
 		switch(choice)
 		{
@@ -402,18 +484,22 @@ public class utility {
 			int celsius=temp;
 			temp=(temp*9/5)+32;
 			System.out.println("converted from celsius->"+celsius+"'C to farenheit->"+temp+"'F");
-			break;
+			return temp;
 		
 		case 2:
 			int farenheit=temp;               
 			temp=(temp-32)*5/9;                   
 			System.out.println("converted from farenheit->" +farenheit+"'F to celsius "+temp+"'C");
-			break;
+			return temp;
 		}	
-		
+		return 0;
 	}
 
-	public static double sqrt(double c)
+	/* static function to find sqrt using newton method
+	   * @param -double c
+	   * @Return-double t
+	   */
+	public static double Sqrt(double c)
 	{
 		double t,epsilon;                 //finding sqrt through newton method
 		t=c;                                           
@@ -426,7 +512,11 @@ public class utility {
       return t;
       
 	}
-	public static String convert_to_binary(int dec)
+	/* static function to covert decimal to binary
+	   * @param -int dec
+	   * @Return-string binary
+	   */
+	public static String ConvertToBinary(int dec)
 	{
 		String binary="";
 		while(dec!=0)
@@ -438,20 +528,23 @@ public class utility {
 	return binary;
 	}
 	
-	public static void convertto_bin_swap(int dec)
+
+	/* static function to covert decimal to binary and print the return decimal after swapping nibbles
+	   * @param -int dec
+	   * @Return-string binary
+	   */
+	public static int ConvertToBinSwap(int dec)
 	{
 		String binary="";
-		int original=dec;
 		while(dec!=0)
 		{
 			int temp=dec%2;
 			binary=temp+binary;        //converting to binary value
 			dec=dec/2;
 		}
-		System.out.println("binary of "+original+" is :"+binary);
-		swapnibbles(binary);
+		return SwapNibbles(binary);
 	}
-	public static void swapnibbles(String str)
+	public static int  SwapNibbles(String str)
 	{
 		String swapped="";
 		if((str.length()%2)!=0)
@@ -469,21 +562,25 @@ public class utility {
 				i=0;
 				}
 		}
-		System.out.println("swapped-nibble is :"+swapped);
-		convertto_dec(swapped);
+		return ConvertToDec(swapped);
 	}
-	public static void convertto_dec(String str)
+	public static int ConvertToDec(String str)
 	{
 		int dec=0,len=str.length()-1;
 		for(int i=0;i<str.length();i++)
 		{
 			dec+=(str.charAt(i)-48)*Math.pow(2,len-i);  //calculating decimal value 
 		}                                               //of swapped nibble    
-		System.out.println("decimal value of swapped nibble is"+dec);
+		
+		return dec;
 	}
 	
-	//bubble sort integer
-	public static int[] bubblesort(int[] arr)
+
+	/* static function for bubble sort of integer
+	   * @param -int arr[]
+	   * @Return-int []arr
+	   */
+	public static int[] BubbleSort(int[] arr)
 	{
 		for(int i=0;i<arr.length;i++)
 		{
@@ -501,8 +598,11 @@ public class utility {
 		return arr;
 	}
 	
-	//bubble sort using generics
-	public static <T extends Comparable<T>> T[] bubblesort_G(T[] arr)
+	/* static function of bubble sort using generics
+	   * @param -T arr[]
+	   * @Return-T[] arr
+	   */
+	public static <T extends Comparable<T>> T[] BubbleSort_G(T[] arr)
 	{
 		for(int i=0;i<arr.length;i++)
 		{
@@ -521,8 +621,11 @@ public class utility {
 	}
 
 	
-	//insertion sort using generics
-	public static String[] insertion_sort(String arr[])
+	/* static function for insertion sort for string
+	   * @param -int arr[]
+	   * @Return-int []arr
+	   */
+	public static String[] InsertionSort(String arr[])
 	{
 		for(int i=1;i<arr.length;i++)
 		{
@@ -539,8 +642,11 @@ public class utility {
 		return arr;
 	}
 	
-	//insertio sort for generics
-	public static <T extends Comparable<T>> T[] insertion_sort_G(T arr[])
+	/* static function for insertion sort using generics
+	   * @param -T arr[]
+	   * @Return-T []arr
+	   */
+	public static <T extends Comparable<T>> T[] InsertionSortGenerics(T arr[])
 	{
 		for(int i=1;i<arr.length;i++)
 		{
@@ -556,19 +662,26 @@ public class utility {
 		}
 		return arr;
 	}
+	/* static function for array input
+	   * @param -String[] arr,int limit
+	   * @Return-String []arr
+	   */
 	public static String[] arrayinput_str(String[] arr,int limit)
 	{
 		for(int i=0;i<limit;i++) 
 		{
 			System.out.println("Enter the word at index: "+i);
-			arr[i]=utility.getLine();
+			arr[i]=Utility.GetLine();
 		}
 		return arr;
 	}
 	
   
-	//checking anagram for given two words
-	public static boolean check_anagram(String word1,String word2)
+	/* static function for checking anagram for two string
+	   * @param -String word1,String word2
+	   * @Return-boolean
+	   */
+	public static boolean CheckAnagram(String word1,String word2)
 	{
 		word1.toLowerCase();
 		word2.toLowerCase();
@@ -592,8 +705,11 @@ public class utility {
 		return true;
 	}
 	
-	           //checking anagram for integer
-	public static boolean check_anagram_int(String word1,String word2)
+	/* static function for checking anagram for two integer
+	   * @param -String word1,String word2
+	   * @Return-boolean
+	   */
+	public static boolean CheckAnagramInt(String word1,String word2)
 	{
 		int arr1[]=new int[10];
 		int arr2[]=new int[10];                   //checking anagram for integer
@@ -616,8 +732,11 @@ public class utility {
 	}
 	
 	
-	//printing prime number in given range
-	public static String print_primes(int min,int max) 
+	/* static function for printing prime number in given range
+	   * @param -int min,int max
+	   * @Return-string str
+	   */
+	public static String PrintPrimes(int min,int max) 
 	{
 		String str="";
 		for(int i=min;i<max;i++)
@@ -640,8 +759,11 @@ public class utility {
 	}
 	
 	
-    //checking palindrome using recursion
-	public static <t> boolean check_palindrome(t data)
+	/* static function for checking palindrome using generics
+	   * @param -t data
+	   * @Return-boolean
+	   */
+	public static <t> boolean CheckPalindrome(t data)
     {
     	String temp=data.toString();
     	for(int i=0;i<temp.length();i++)
@@ -653,8 +775,12 @@ public class utility {
     	
     }
 	
+	/* static function for reading file
+	   * @param -string file
+	   * @Return-string str
+	   */
 	@SuppressWarnings("deprecation")
-	public static String readfile(String file)
+	public static String ReadFile(String file)
 	{
 		String str="";
 		try
@@ -673,8 +799,11 @@ public class utility {
 		return str;
 		
 	}
-	  //binary search for strings
-	public static  void binarysearch(String[] Sorted_arr,String find)
+	/* static function for binary search of string
+	   * @param -String[] Sorted_arr,String find
+	   * @Return-void
+	   */
+	public static  void BinarySearch(String[] Sorted_arr,String find)
 	{
 		int mid=0;
 		int low=0;
@@ -701,8 +830,11 @@ public class utility {
 	}
 
 
-     //binary search generics
-public static <t extends Comparable<t>>  void binarysearch_generics(t[] Sorted_arr,t find)
+	/* static function for binary search using generics
+	   * @param -t[] Sorted_arr,t find
+	   * @Return-void
+	   */
+public static <t extends Comparable<t>>  void BinarySearchGenerics(t[] Sorted_arr,t find)
 {
 	int mid=0;
 	int low=0;
@@ -729,8 +861,11 @@ public static <t extends Comparable<t>>  void binarysearch_generics(t[] Sorted_a
 }
 
 
-          //merge sort for string
-public static void merge(String arr[], int l, int m, int r) 
+/* static function for merge sort
+ * @param -String arr[], int l, int m, int r
+ * @Return-void
+ */
+public static void Merge(String arr[], int l, int m, int r) 
 { 
     // Find sizes of two subarrays to be merged 
     int n1 = m - l + 1; 
@@ -785,7 +920,7 @@ public static void merge(String arr[], int l, int m, int r)
     } 
 } 
 
-public static void sort(String arr[], int l, int r) 
+public static void Sort(String arr[], int l, int r) 
 { 
     if (l < r) 
     { 
@@ -793,30 +928,39 @@ public static void sort(String arr[], int l, int r)
         int m = (l+r)/2; 
 
         // Sort first and second halves 
-        sort(arr, l, m); 
-        sort(arr , m+1, r); 
+        Sort(arr, l, m); 
+        Sort(arr , m+1, r); 
 
         // Merge the sorted halves 
-        merge(arr, l, m, r); 
+        Merge(arr, l, m, r); 
     } 
 }
 
-public static String getFormatedDate(Date date){
+/* static function for getting date
+ * @param -Date date
+ * @Return-	return sdf.format(date)
+ */
+public static String GetFormatedDate(Date date){
 	SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
 	return sdf.format(date);
 }
 
 
-            //String replace using REGEX
 
-public static String convertString(UserDetails userDetails,String message){
+/* static function for replacing the default message with user details using regex
+ * @param -UserDetails userDetails,String message
+ * @Return-	return msg
+ */
+
+public static String ConvertString(UserDetails userDetails,String message){
 	String REGEX_NAME="<<name>>";
 	String REGEX_FULLNAME="<<fullname>>";
 	String REGEX_MOBILE_NO="xxxxxxxxxx";
 	String REGEX_DATE="xx/xx/xxxx";
+	
 	Pattern p = Pattern.compile(REGEX_NAME);
-   		Matcher m = p.matcher(message); 
-   		message = m.replaceAll(userDetails.getfName());
+   	Matcher m = p.matcher(message); 
+   	message = m.replaceAll(userDetails.getfName());
 
 	p = Pattern.compile(REGEX_FULLNAME);
 	m = p.matcher(message); 
@@ -833,15 +977,18 @@ public static String convertString(UserDetails userDetails,String message){
 	return message;
 }
 
-//guess game code
-public static int find()
+/* static function for guess game
+ * @param -null
+ * @Return-	return low
+ */
+public static int Find()
 {
 	int low=0,high=127,mid;
 	while(low!=high)
 	{
 		mid=(low+high)/2;
 		System.out.println("enter 1 if number is between"+low+"-"+mid+"/n enter 2 if  no is between"+(mid+1)+"-" +high);
-		int c=utility.getInt();
+		int c=Utility.GetInt();
 		if(c==1)
 			high=mid;
 		else

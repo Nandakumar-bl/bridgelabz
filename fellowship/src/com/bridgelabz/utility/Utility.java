@@ -757,7 +757,6 @@ public class Utility {
 			}
 			if(j==i)
 			{
-				System.out.println(i+" is a prime number");
 				str=str+i+" ";         //string is used for finding paindrome and anagram
 			}
 			}
@@ -794,7 +793,6 @@ public class Utility {
 		FileInputStream fir=new FileInputStream(file);
 	    DataInputStream dis=new DataInputStream(fir);
 	    str=dis.readLine();
-	    System.out.println(str);
 	    dis.close();
 	    fir.close();
 		}
@@ -888,11 +886,8 @@ public static void Merge(String arr[], int l, int m, int r)
         R[j] = arr[m + 1+ j]; 
 
 
-
-    // Initial indexes of first and second subarrays 
     int i = 0, j = 0; 
 
-    // Initial index of merged subarry array 
     int k = l; 
     while (i < n1 && j < n2) 
     { 
@@ -909,7 +904,6 @@ public static void Merge(String arr[], int l, int m, int r)
         k++; 
     } 
 
-    /* Copy remaining elements of L[] if any */
     while (i < n1) 
     { 
         arr[k] = L[i]; 
@@ -917,7 +911,6 @@ public static void Merge(String arr[], int l, int m, int r)
         k++; 
     } 
 
-    /* Copy remaining elements of R[] if any */
     while (j < n2) 
     { 
         arr[k] = R[j]; 
@@ -993,7 +986,8 @@ public static int Find()
 	while(low!=high)
 	{
 		mid=(low+high)/2;
-		System.out.println("enter 1 if number is between"+low+"-"+mid+"/n enter 2 if  no is between"+(mid+1)+"-" +high);
+		System.out.println("enter 1 if number is between"+low+"-"+mid+"/n "
+				+ "enter 2 if  no is between"+(mid+1)+"-" +high);
 		int c=Utility.GetInt();
 		if(c==1)
 			high=mid;

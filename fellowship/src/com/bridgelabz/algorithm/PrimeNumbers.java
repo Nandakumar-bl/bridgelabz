@@ -17,7 +17,12 @@ public class PrimeNumbers {
 		System.out.println("Enter the minimum value");
 		min=Utility.GetInt();
 		        //prints prime between the range
-		Utility.PrintPrimes(min, max);
+		 String str[]=Utility.PrintPrimes(min, max).split(" ");
+	        Integer arr[]=new Integer[str.length];
+	        for(int i=0;i<str.length;i++)
+	        	arr[i]=Integer.parseInt(str[i]);
+	        for(int i=0;i<arr.length;i++)
+	        	System.out.println(arr[i]+"is a prime number");
 		
 
 	}

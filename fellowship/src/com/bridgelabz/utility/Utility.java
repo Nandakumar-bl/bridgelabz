@@ -56,7 +56,7 @@ public class Utility {
 	  }
 	  return 0.0;
 }
-  /* static function to replace the string message with username
+  /** static function to replace the string message with username
    * @param -String s
    * @Return-String original
    */
@@ -68,7 +68,7 @@ public class Utility {
 	    	
 	    	
     }
-  /* static function to print percentage of heads and tails for the number of flips
+  /** static function to print percentage of heads and tails for the number of flips
    * @param -int flips
    * @Return-void
    */
@@ -88,7 +88,7 @@ public class Utility {
         System.out.println("Tails percent is:"+t_percent);
         System.out.println("Head percent is:"+h_percent);
     }
-  /* static function to check leap year
+  /** static function to check leap year
    * @param -int year
    * @Return-boolean
    */
@@ -114,7 +114,7 @@ public class Utility {
 	  return false;
     }
 	    
-  /* static function to print power of 2
+  /** static function to print power of 2
    * @param -int n
    * @Return-void
    */
@@ -127,7 +127,7 @@ public class Utility {
     }
     
   
-  /* static function to print the harmonic value
+  /** static function to print the harmonic value
    * @param -int n
    * @Return-void
    */
@@ -142,7 +142,7 @@ public class Utility {
 	    	
     }
   
-  /* static function to print the prime factors
+  /** static function to print the prime factors
    * @param -int n
    * @Return-void 
    *    */
@@ -162,7 +162,7 @@ public class Utility {
 		  System.out.println("factor is"+factor);
 	  
   }
-  /* static function to get two dimensional array input for integer and to print array
+  /** static function to get two dimensional array input for integer and to print array
    * @param -int row,int col
    * @Return-void
    */
@@ -180,7 +180,7 @@ public class Utility {
 	    Printarray(arr,row,col);
 	}
 
-  /* static function to get two dimensional array input for double and to print array
+  /** static function to get two dimensional array input for double and to print array
    * @param -int row,int col
    * @Return-void
    */
@@ -197,7 +197,7 @@ public class Utility {
       }
 	    Printarray(arr,row,col);
 	}
-	/* static function to get two dimensional array input for boolean and to print array
+	/*** static function to get two dimensional array input for boolean and to print array
 	   * @param -int row,int col
 	   * @Return-void
 	   */
@@ -214,7 +214,7 @@ public class Utility {
       }
 	    Printarray(arr,row,col);
 	}
-	/* static generic  function to print two dimensional array
+	/*** static generic  function to print two dimensional array
 	   * @param -t arr[][],int row,int col
 	   * @Return-void
 	   */
@@ -230,7 +230,7 @@ public class Utility {
       }
 	}
 
-	/* static function to print  three indexes of an array which gives sum zero
+	/*** static function to print  three indexes of an array which gives sum zero
 	   * @param -int[] arr,int limit
 	   * @Return-int count
 	   */
@@ -262,7 +262,7 @@ public class Utility {
 		return count;
 	}
 
-	/* static function to find eucledian distance
+	/*** static function to find eucledian distance
 	   * @param -int x,int y
 	   * @Return-return Math.sqrt(x*x+y*y);
 	   */
@@ -272,7 +272,7 @@ public class Utility {
 		return Math.sqrt(x*x+y*y);  //formula for eucledian diastance
 	}
 	
-	/* static function to print roots of a quadratic equation
+	/*** static function to print roots of a quadratic equation
 	   * @param -int a,int b,int c
 	   * @Return-void
 	   */
@@ -292,7 +292,7 @@ public class Utility {
 				System.out.println(x2);
 	}
 	
-	/* static function to print wind chill
+	/** static function to print wind chill
 	   * @param -int t,int v
 	   * @Return-void
 	   */
@@ -306,7 +306,7 @@ public class Utility {
 		System.out.println("windchill is:"+wind_temp);   //prints wind chill
 	}
 
-	/* static function play gambling
+	/** static function play gambling
 	   * @param -int Stake,int Goal,int noOfTimes
 	   * @Return-void
 	   */
@@ -370,7 +370,7 @@ public class Utility {
 
 	}
 	
-	/* static function to generate coupon
+	/** static function to generate coupon
 	   * @param -no_of_coupons
 	   * @Return-void
 	   */
@@ -391,7 +391,7 @@ public class Utility {
 		}
 	}
 	
-	/* static function to find  monthly payment
+	/** static function to find  monthly payment
 	   * @param -double prin,double i_rate,double year
 	   * @Return-double m_payment;
 	   */
@@ -404,7 +404,7 @@ public class Utility {
 		
 	}
 	
-	/* static function to find day of the week
+	/** static function to find day of the week
 	   * @param -int date,int month,int year
 	   * @Return-int d0
 	   */
@@ -419,7 +419,7 @@ public class Utility {
 	    return d0;
 	}
   
-	/* static function to print minimum notes for given amount
+	/** static function to print minimum notes for given amount
 	   * @param -int amt
 	   * @Return-int[] notes
 	   */
@@ -444,7 +444,7 @@ public class Utility {
 		return notes;
 		
 	}
-	/* static functions to start stopwatcht
+	/** static functions to start stopwatcht
 	   * @param ------
 	   * @Return-long
 	   */
@@ -456,7 +456,7 @@ public class Utility {
 		System.out.println(start);
 		return start;
 	}
-	/* static function to stop the stopwatch
+	/** static function to stop the stopwatch
 	   * @param ---
 	   * @Return-long stop
 	   */
@@ -468,7 +468,7 @@ public class Utility {
 		System.out.println(stop);	
 		return stop;
 	}
-	/* static function to finf elapse time for stopwatch
+	/** static function to finf elapse time for stopwatch
 	   * @param -null
 	   * @Return-long elapsedtime
 	   */
@@ -478,7 +478,7 @@ public class Utility {
 		return elapsedtime;
 	}
 	
-	/* static function to print and conversion from 'C to'F and vice-versa
+	/** static function to print and conversion from 'C to'F and vice-versa
 	   * @param -int temp,int choice
 	   * @Return-int temp
 	   */
@@ -501,7 +501,7 @@ public class Utility {
 		return 0;
 	}
 
-	/* static function to find sqrt using newton method
+	/** static function to find sqrt using newton method
 	   * @param -double c
 	   * @Return-double t
 	   */
@@ -518,7 +518,7 @@ public class Utility {
       return t;
       
 	}
-	/* static function to covert decimal to binary
+	/** static function to covert decimal to binary
 	   * @param -int dec
 	   * @Return-string binary
 	   */
@@ -535,7 +535,7 @@ public class Utility {
 	}
 	
 
-	/* static function to covert decimal to binary and print the return decimal after swapping nibbles
+	/** static function to covert decimal to binary and print the return decimal after swapping nibbles
 	   * @param -int dec
 	   * @Return-string binary
 	   */
@@ -582,7 +582,7 @@ public class Utility {
 	}
 	
 
-	/* static function for bubble sort of integer
+	/** static function for bubble sort of integer
 	   * @param -int arr[]
 	   * @Return-int []arr
 	   */
@@ -604,7 +604,7 @@ public class Utility {
 		return arr;
 	}
 	
-	/* static function of bubble sort using generics
+	/** static function of bubble sort using generics
 	   * @param -T arr[]
 	   * @Return-T[] arr
 	   */
@@ -627,7 +627,7 @@ public class Utility {
 	}
 
 	
-	/* static function for insertion sort for string
+	/** static function for insertion sort for string
 	   * @param -int arr[]
 	   * @Return-int []arr
 	   */
@@ -648,7 +648,7 @@ public class Utility {
 		return arr;
 	}
 	
-	/* static function for insertion sort using generics
+	/** static function for insertion sort using generics
 	   * @param -T arr[]
 	   * @Return-T []arr
 	   */
@@ -668,7 +668,7 @@ public class Utility {
 		}
 		return arr;
 	}
-	/* static function for array input
+	/** static function for array input
 	   * @param -String[] arr,int limit
 	   * @Return-String []arr
 	   */
@@ -683,14 +683,14 @@ public class Utility {
 	}
 	
   
-	/* static function for checking anagram for two string
+	/** static function for checking anagram for two string
 	   * @param -String word1,String word2
 	   * @Return-boolean
 	   */
-	public static boolean CheckAnagram(String word1,String word2)
+	public static boolean CheckAnagram(String Word1,String Word2)
 	{
-		word1.toLowerCase();
-		word2.toLowerCase();
+		String word1=Word1.toLowerCase();
+		String word2=Word2.toLowerCase();
 		int arr1[]=new int[25];
 		int arr2[]=new int[25];
 		if(word1.length()!=word2.length())
@@ -711,7 +711,7 @@ public class Utility {
 		return true;
 	}
 	
-	/* static function for checking anagram for two integer
+	/** static function for checking anagram for two integer
 	   * @param -String word1,String word2
 	   * @Return-boolean
 	   */
@@ -738,7 +738,7 @@ public class Utility {
 	}
 	
 	
-	/* static function for printing prime number in given range
+	/** static function for printing prime number in given range
 	   * @param -int min,int max
 	   * @Return-string str
 	   */
@@ -747,15 +747,15 @@ public class Utility {
 		String str="";
 		for(int i=min;i<max;i++)
 		{
-			int j=2;
-			while(i!=j) 
+			boolean isprime=true;
+			for(int j=2;j<i;j++)
 			{
-				if(i%j==0) 
-					break;
-				else
-					j++;
+				if(i%j==0) {
+					isprime=false;
+			        break;
+				}
 			}
-			if(j==i)
+			if(isprime)
 			{
 				str=str+i+" ";         //string is used for finding paindrome and anagram
 			}
@@ -764,7 +764,7 @@ public class Utility {
 	}
 	
 	
-	/* static function for checking palindrome using generics
+	/** static function for checking palindrome using generics
 	   * @param -t data
 	   * @Return-boolean
 	   */
@@ -780,7 +780,7 @@ public class Utility {
     	
     }
 	
-	/* static function for reading file
+	/** static function for reading file
 	   * @param -string file
 	   * @Return-string str
 	   */
@@ -803,7 +803,7 @@ public class Utility {
 		return str;
 		
 	}
-	/* static function for binary search of string
+	/** static function for binary search of string
 	   * @param -String[] Sorted_arr,String find
 	   * @Return-void
 	   */
@@ -834,7 +834,7 @@ public class Utility {
 	}
 
 
-	/* static function for binary search using generics
+	/** static function for binary search using generics
 	   * @param -t[] Sorted_arr,t find
 	   * @Return-void
 	   */
@@ -865,7 +865,7 @@ public static <t extends Comparable<t>>  void BinarySearchGenerics(t[] Sorted_ar
 }
 
 
-/* static function for merge sort
+/** static function for merge sort
  * @param -String arr[], int l, int m, int r
  * @Return-void
  */
@@ -875,11 +875,11 @@ public static void Merge(String arr[], int l, int m, int r)
     int n1 = m - l + 1; 
     int n2 = r - m; 
 
-    /* Create temp arrays */
+    /** Create temp arrays */
     String L[] = new String[n1]; 
     String R[] = new String[n2]; 
 
-    /*Copy data to temp arrays*/
+    /**Copy data to temp arrays*/
     for (int i=0; i<n1; ++i) 
         L[i] = arr[l + i]; 
     for (int j=0; j<n2; ++j) 
@@ -935,7 +935,7 @@ public static void Sort(String arr[], int l, int r)
     } 
 }
 
-/* static function for getting date
+/** static function for getting date
  * @param -Date date
  * @Return-	return sdf.format(date)
  */
@@ -946,7 +946,7 @@ public static String GetFormatedDate(Date date){
 
 
 
-/* static function for replacing the default message with user details using regex
+/** static function for replacing the default message with user details using regex
  * @param -UserDetails userDetails,String message
  * @Return-	return msg
  */
@@ -976,7 +976,7 @@ public static String ConvertString(UserDetails userDetails,String message){
 	return message;
 }
 
-/* static function for guess game
+/** static function for guess game
  * @param -null
  * @Return-	return low
  */

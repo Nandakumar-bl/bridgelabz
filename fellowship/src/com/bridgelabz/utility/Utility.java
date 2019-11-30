@@ -34,6 +34,7 @@ public class Utility {
 	  }
 	  return 0;
 }
+  
   public static String GetLine()
   {
 	  try {
@@ -55,6 +56,16 @@ public class Utility {
 	    System.out.println(e);
 	  }
 	  return 0.0;
+}
+  public static long Getlong()
+  {
+	  try {
+	        return Long.parseLong(br.readLine());
+	  }
+	  catch(Exception e) {
+	    System.out.println(e);
+	  }
+	  return 0;
 }
   /** static function to replace the string message with username
    * @param -String s
@@ -847,7 +858,7 @@ public static <t extends Comparable<t>>  void BinarySearchGenerics(t[] Sorted_ar
 	{
 		mid=(low+high)/2;
 		
-		if(Sorted_arr[mid]==(find))
+		if(Sorted_arr[mid].compareTo(find)==0)
 		{
 			System.out.println("the search for->"+find+" is found");
 		break;

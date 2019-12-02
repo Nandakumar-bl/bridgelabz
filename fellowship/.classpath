@@ -4,5 +4,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="testing"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="C:/Users/Hi/Downloads/java-json.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Hi/Downloads/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="files"/>
 </classpath>

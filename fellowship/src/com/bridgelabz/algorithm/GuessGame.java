@@ -13,7 +13,6 @@ public class GuessGame {
 	public static void main(String[] args) {
 		
 		System.out.println("guess a no beween o to 127");
-		Utility.GetInt();
 		try
 		{
 			System.out.println("guessed no is"+Utility.Find());  //guessing a number

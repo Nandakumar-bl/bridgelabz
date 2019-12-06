@@ -1,0 +1,18 @@
+package com.bridgelabz.design.Structural.facadepattern;
+
+import com.sun.jdi.connect.spi.Connection;
+
+public class MySqlHelper {
+	public static Connection getMySqlDBConnection(){
+		//get MySql DB connection using connection parameters
+		return null;
+	}
+	
+	public void generateMySqlPDFReport(String tableName, Connection con){
+		//get data from table and generate pdf report
+	}
+	
+	public void generateMySqlHTMLReport(String tableName, Connection con){
+		//get data from table and generate pdf report
+	}
+}

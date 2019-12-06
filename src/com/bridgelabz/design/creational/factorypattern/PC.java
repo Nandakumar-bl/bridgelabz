@@ -1,0 +1,33 @@
+package com.bridgelabz.design.creational.factorypattern;
+
+public class PC extends Computer 
+{
+   private String name;	
+   private String processor;
+   private String RAM;
+   private int price;
+   
+   PC(String name,String processor,String RAM,int price)
+   {
+	   this.name=name;
+	   this.processor=processor;
+	   this.RAM=RAM;
+   }
+   public String getName()
+   {
+	   return name;
+   }
+   public String getProcessor()
+   {
+	   return processor;
+   }
+   public String getRAM()
+   {
+	   return RAM;
+   }
+   public int getPrice()
+   {
+		return price;
+	}
+	
+}

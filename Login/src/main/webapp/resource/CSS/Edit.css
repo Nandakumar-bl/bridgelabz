@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+.edit
+{
+	font-family: sans-serif;
+	font-size: 40px;
+	text-shadow: 1px 1px white;
+	position: absolute;
+	left:35%;
+	
+}
+.details
+{
+	color:white;
+	width:600px;
+	height:200px;
+	border:1px solid black;
+	position:absolute;
+	background:transparent;
+	top:15%;
+	left:25%;
+	padding:70px 20px;
+}
+.details input[type="submit"]
+{
+	width:100px;
+	height: 25px;
+	text-align:center;
+	color:black;
+	position: absolute;
+	right: 45%;
+	bottom:20px;
+}
+.details input[type="submit"]:hover
+{
+	color:black;
+	background-color:yellow;
+	cursor: pointer;
+}
+input[type="submit"]
+{
+	width:100px;
+	height: 25px;
+	text-align:center;
+	color:black;
+	position: absolute;
+	right: 45%;
+	bottom:20px;
+}
+input[type="submit"]:hover
+{
+	color:black;
+	background-color:skyblue;
+	cursor: pointer;
+}
+button
+{
+	width:100px;
+	height: 25px;
+	text-align:center;
+	color:black;
+	
+}
+button:hover
+{
+	color:black;
+	background-color:skyblue;
+	cursor: pointer;
+}
+.logout
+{
+	position:absolute;
+	top:0%;
+	left:95%;
+}

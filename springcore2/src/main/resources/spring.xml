@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:mvc="http://www.springframework.org/schema/mvc"
+     xmlns:context="http://www.springframework.org/schema/context"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans     
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/mvc 
+      http://www.springframework.org/schema/mvc/spring-mvc.xsd
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd"> 
+      
+    <context:component-scan base-package="com.bridgelabz.bean"></context:component-scan>
+	
+	<bean id="laptop" class="com.bridgelabz.bean.Laptop" autowire="byName" scope="prototype"></bean>
+	
+	<bean id="harddisk" class="com.bridgelabz.bean.Harddisk" scope="singleton">
+	<property name="capacity" value="1TB"></property>
+	</bean>
+	
+	<bean id="ram" class="com.bridgelabz.bean.Ram" lazy-init="false">
+	<property name="value" value="4GB"></property>
+	</bean>
+	
+	<bean id="pendrive" class="com.bridgelabz.bean.Pendrive" scope="singleton" autowire="byType">
+	<property name="capacity" value="64GB"></property>
+	</bean>
+
+</beans>
